@@ -1,6 +1,6 @@
 # fdb-object-store
 
-A simple object store built on top of [FoundationDB](https://www.foundationdb.org). This is only a proof of concept.
+A simple object store built on top of [FoundationDB](https://www.foundationdb.org). This is only a proof of concept developed for a blog post: [Building an object store with FoundationDB](https://fabianlindfors.se/blog/building-an-object-store-with-foundation-db/).
 
 ## Running
 
