@@ -4,9 +4,9 @@ A simple object store built on top of [FoundationDB](https://www.foundationdb.or
 
 ## Running
 
-Requires the FoundationDB Go bindings, follow the instructions [here](https://github.com/apple/foundationdb/tree/master/bindings/go) to install. Also requires the [Gin web framework](https://github.com/gin-gonic/gin).
+Requires the FoundationDB Go bindings, follow the instructions [here](https://github.com/apple/foundationdb/tree/master/bindings/go) to install. Also requires the [Gin web framework](https://github.com/gin-gonic/gin). After dependencies have been installed the server can be started with `go run main.go`.
 
-After dependencies have been installed the server can be started with `go run main.go`.
+## Using 
 
 The object store is dead simple to use and only has two features, uploading files and downloading them.
 
@@ -20,7 +20,7 @@ $ http -f POST localhost:8080/object/images/my_image.png content_type="image/png
 Downloading an existing file is as simple as making a GET request to the same past as the upload. This can also be done through a browser.
 
 ```
-# Example download of previously uploaded file (once again with HTTPie)
+# Example download of previously uploaded file (with HTTPie)
 $ http -d GET localhost:8080/object/images/my_image.png
 ```
 
