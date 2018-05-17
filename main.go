@@ -50,13 +50,13 @@ func saveFile(name string, contentType string, reader io.Reader) {
 		i := 0
 
 		for {
-			_, err := reader.Read(buffer)
+			n, err := reader.Read(buffer)
 
 			if err == io.EOF {
 				break
 			}
 
-			tr.Set(tuple.Tuple{name, "data", i}, buffer)
+			tr.Set(tuple.Tuple{name, "data", i}, buffer[:n])
 			i++
 		}
 
